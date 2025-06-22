@@ -1,0 +1,184 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte 1 */
+  background-color: #f0f4f8; /* Cor clara de fundo */
+  color: #222; /* Cor do texto */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente todo o conteúdo */
+  padding: 30px 15px;
+  min-height: 100vh;
+}
+
+/* Container principal para limitar largura e criar margem */
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 20px; /* Margens laterais aparentes */
+}
+
+/* Títulos principais */
+h1 {
+  font-family: 'Georgia', serif; /* Fonte 2 */
+  color: #2c3e50; /* Azul escuro */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Menu */
+ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+ul li a {
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace; /* Fonte 3 */
+  color: #2980b9; /* Azul médio */
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Pseudo-classe para hover nos links do menu */
+ul li a:hover,
+ul li a:focus {
+  background-color: #2980b9;
+  color: #fff;
+  outline: none;
+}
+
+/* Flexbox para organizar conteúdo lado a lado (exemplo com texto e imagem) */
+.flex-content {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* Box para texto e imagem, divididos lado a lado */
+.flex-content > div {
+  flex: 1 1 400px;
+  background-color: #ffffff; /* Branco para destaque */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+}
+
+/* Imagens com largura máxima para responsividade */
+.flex-content img {
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Estilo para parágrafos dentro dos boxes */
+.flex-content p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Lista de torneios e produtos (exemplo lado a lado) */
+.list-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.list-row ul,
+.list-row .product-list {
+  flex: 1 1 300px;
+  background-color: #dff0fc; /* Azul claro */
+  padding: 20px;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+}
+
+/* Estilo de hover para itens da lista */
+.list-row ul li:hover {
+  color: #e67e22; /* Laranja */
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Cabeçalhos h2 */
+h2 {
+  font-family: 'Georgia', serif;
+  color: #34495e; /* Azul escuro */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Link vídeo com hover */
+a[href*="youtube.com"] {
+  display: inline-block;
+  margin: 15px auto 40px;
+  padding: 10px 20px;
+  background-color: #e74c3c; /* Vermelho */
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+a[href*="youtube.com"]:hover,
+a[href*="youtube.com"]:focus {
+  background-color: #c0392b;
+  outline: none;
+}
+
+/* Rodapé estilizado */
+footer {
+  background-color: #222;
+  color: #eee;
+  padding: 25px 20px;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+footer a {
+  color: #1da1f2; /* Azul Instagram */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #0d8ddb;
+  outline: none;
+}
+
+/* Responsividade simples */
+@media (max-width: 768px) {
+  .flex-content,
+  .list-row {
+    flex-direction: column;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
